@@ -1,0 +1,51 @@
+{
+  "name": "eau_be",
+  "version": "1.0.0",
+  "description": "Eau site BackEnd enviroment",
+  "main": "server.js",
+  "repository": "https://github.com/gianni10049/EAU-BE",
+  "author": "gianni10049",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node-dev ./bin/www.ts",
+    "migrate": "yarn sequelize-cli db:migrate",
+    "mig-roll": "yarn sequelize db:migrate:undo",
+    "seeding": "yarn sequelize-cli db:seed:all",
+    "seed-roll": "yarn sequelize-cli db:seed:undo:all",
+    "seed-reinit": "yarn sequelize-cli db:seed:undo:all && yarn sequelize-cli db:seed:all",
+    "seed-specific": "yarn sequelize-cli db:seed --seed "
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-typescript": "^7.20.2",
+    "prettier": "^2.8.1",
+    "sequelize-cli": "^6.5.2"
+  },
+  "prettier": {
+    "tabWidth": 4,
+    "useTabs": true,
+    "semi": true,
+    "singleQuote": true,
+    "quoteProps": "preserve",
+    "jsxSingleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "bracketSameLine": true,
+    "arrowParens": "always"
+  },
+  "dependencies": {
+    "@graphql-tools/graphql-file-loader": "^7.5.13",
+    "@graphql-tools/load": "^7.8.8",
+    "@graphql-tools/schema": "^9.0.12",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.6.0",
+    "mysql2": "^2.3.3",
+    "node-dev": "^7.4.3",
+    "sequelize": "^6.26.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  }
+}
