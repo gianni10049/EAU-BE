@@ -1,0 +1,4 @@
+type genericResponse {
+    response: Boolean!
+    responseStatus: String!
+}

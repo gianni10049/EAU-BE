@@ -1,5 +1,9 @@
 type Query {
-    test: String
+    # General call
+    routeControl(
+        token: String!
+        account_needed: Boolean
+    ): genericResponse
 }
 
 
